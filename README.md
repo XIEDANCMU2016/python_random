@@ -1,4 +1,16 @@
 # python_random
+## arithmetic
+```
+5 / 3
+1.6666666666666667
+
+5 // 3
+1
+
+5 % 3
+2
+```
+
 
 ## list
 
@@ -93,3 +105,18 @@ finally:
 
 ```
 
+## Set
+
+ - sets operations: equal, union, intersect, difference, symmetric difference
+ 
+ ```
+ set_a = {1, 2, 3}
+ set_b = {2, 4}
+ 
+ set_a == set_b #False
+ set_a & set_b # {2}
+ set_a | set_b # {1, 2, 3, 4}
+ set_a - set_b # {1, 3}
+ set_a ^ set_b # {1, 3, 4} symmetric difference
+ 
+ ```
