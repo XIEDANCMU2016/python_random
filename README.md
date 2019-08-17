@@ -1,6 +1,47 @@
 # python_random
 
-## list array
+
+## python sort and comparison
+0. https://docs.python.org/2/howto/sorting.html#sortinghowto
+1. sort as builtin or sort as list function
+2. itemgetter, attrgetter
+3. cpm function takes 2 objects as input, return positive if o1>o2, 0 if ==, negative if <. using cpm, you get increasing order. in python 3 cpm was removed, from functools import cmp_to_key is used to transform cmp to key function
+
+
+```
+sorted(iterables, key=some function takes in one element and return one number, reverse=False by default)
+lst.sort(key=some function takes in one element and return one number, reverse=False by default)
+
+example:
+from operator import itemgetter, attrgetter
+from functools import cmp_to_key
+class person():
+ def __init__(self, name, age):
+  self.name = name
+  self.age = age
+lst = [person('wang', 12), person('li', 34)]
+lst = sorted(lst, key=lambda x: x.age)
+lst.sorted(key=lambda x: x.age) #inplace
+lst.sorted(key=attrgetter('age', 'name'))
+
+lst = [(1,2), (4,5), (7,8)]
+lst.sort(key=lambda x: x[1])
+lst = sorted(lst, key=lambda x: x[1])
+lst = sorted(lst, key=itemgetter(1))
+
+lst = sorted(lst, key=cpm_to_key(some comparison function))
+
+```
+
+## Class builtin function
+
+1. __repr__ vs __str__
+- https://blog.csdn.net/luckytanggu/article/details/53649156
+
+- __repr__ define results for both str output and print
+- __str__ only for print
+
+## list swap
 
 a[i], a[i+1] = a[i+1], a[i]
 https://codeandchaos.wordpress.com/2014/11/15/swap-two-objects-in-python/
