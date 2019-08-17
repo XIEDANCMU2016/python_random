@@ -1,4 +1,10 @@
 # python_random
+
+## list array
+
+a[i], a[i+1] = a[i+1], a[i]
+https://codeandchaos.wordpress.com/2014/11/15/swap-two-objects-in-python/
+
 ## arithmetic
 ```
 5 / 3
@@ -26,8 +32,8 @@ lst[4] # error
 
 2. list sort
 
- - list.sort(key=..., reverse=...)
- - sorted(list, key, reverse)
+ - list.sort(key=..., reverse=...) # in place
+ - sorted(list, key, reverse) # return a new list
  - Another difference is that the list.sort() method is only defined for lists. In contrast, the sorted() function accepts any iterable.
 ```
 lst = [1, 2, 3]
